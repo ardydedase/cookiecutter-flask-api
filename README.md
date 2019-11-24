@@ -42,7 +42,7 @@ docker-compose up
 Pre-requisites:
 - Download [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
 - Python 3.6
-- Virtual Environment
+- Install [virtualenv](https://virtualenv.pypa.io/en/latest/installation/)
 
 Steps:
 

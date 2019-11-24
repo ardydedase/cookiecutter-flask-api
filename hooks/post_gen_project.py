@@ -1,7 +1,7 @@
 import os
 import shutil
 
-print(os.getcwd())  # prints /absolute/path/to/{{cookiecutter.project_slug}}
+print("Path to project: ", os.getcwd())  # prints /absolute/path/to/{{cookiecutter.project_slug}}
 
 def remove(filepath):
     if os.path.isfile(filepath):
@@ -57,12 +57,12 @@ message = """
 |            |         |           |        |            |      |           |
 +------------+         +-----------+        +------------+      +-----------+
 
-Next steps:
+Run the following in your command line:
 
-cd {{cookiecutter.project_slug}}
-docker-compose up
+1. cd {{cookiecutter.project_slug}}
+2. docker-compose up
 
-Check out the README file for more.
+Refer to the docs: https://github.com/ardydedase/cookiecutter-flask-api
 """
 
 print(message)
