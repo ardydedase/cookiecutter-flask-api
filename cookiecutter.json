@@ -1,0 +1,8 @@
+{
+	"github_username": "ardydedase",
+	"project_name": "omsvc flask",
+	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+	"project_short_description": "Openmicroservice using Flask.",
+	"version": "0.1.0",
+	"database": ["None", "DynamoDB"]
+}

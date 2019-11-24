@@ -1,0 +1,25 @@
+version: "3"
+services: 
+  db:
+    image: amazon/dynamodb-local:latest
+    ports:
+      - "8000:8000"
+    command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory"]
+  populate-db: 
+    build: .
+    working_dir: /flask-service
+    restart: on-failure
+    environment:
+      FLASK_APP: app/cli.py
+      FLASK_ENV: docker
+    command: ["flask", "dynamo", "create-poem-table"]
+    depends_on:
+      - db
+  api:
+    build: .
+    working_dir: /flask-service
+    restart: on-failure
+    ports: 
+      - "5000:5000"
+    depends_on: 
+      - db
