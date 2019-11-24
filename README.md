@@ -84,3 +84,15 @@ Checkout this repo and Run the following:
 ```
 cookiecutter cookiecutter-flask-dynamodb
 ```
+
+## Production build
+
+Run with gunicorn.
+```
+FLASK_ENV=production gunicorn AWS_ACCESS_KEY_ID="your-key-here" --build-arg AWS_SECRET_ACCESS_KEY="your-key-here" --bind 0.0.0.0:5000 wsgi
+```
+
+Build with docker for production.
+```
+docker build . -f Dockerfile.prod --build-arg FLASK_ENV="production" --build-arg AWS_ACCESS_KEY_ID="your-key-here" --build-arg AWS_SECRET_ACCESS_KEY="your-key-here" -t production_image_build
+```
