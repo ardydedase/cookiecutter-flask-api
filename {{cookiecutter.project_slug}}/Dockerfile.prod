@@ -1,7 +1,7 @@
 FROM python:3.6
 
-RUN mkdir -p /flask-service
-WORKDIR /flask-service
+RUN mkdir -p /flask-api
+WORKDIR /flask-api
 
 # Copy files
 COPY ./pytest.ini ./

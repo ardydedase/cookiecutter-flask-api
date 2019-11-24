@@ -7,7 +7,7 @@ services:
     command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory"]
   populate-db: 
     build: .
-    working_dir: /flask-service
+    working_dir: /flask-api
     restart: on-failure
     environment:
       FLASK_APP: app/cli.py
@@ -17,7 +17,7 @@ services:
       - db
   api:
     build: .
-    working_dir: /flask-service
+    working_dir: /flask-api
     restart: on-failure
     ports: 
       - "5000:5000"

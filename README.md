@@ -38,6 +38,18 @@ Run the following command:
 docker-compose up
 ```
 
+After running docker compose, you might see the following: 
+
+```
+pynamodb.exceptions.TableError: Unable to describe table: Could not connect to the endpoint URL: "http://db:8000/"
+```
+
+This is because Flask is trying to connect to DynamoDB while the table is not yet available. This can be ignored because Flask will retry to connect after failure.
+
+Local endpoints: 
+- http://localhost:5000/api/poem/users/wickedmanok/poems
+- http://localhost:5000/healthcheck
+
 ### Run locally
 Pre-requisites:
 - Download [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
