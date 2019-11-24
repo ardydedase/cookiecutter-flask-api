@@ -20,7 +20,7 @@ Goal of the design is to make use of repositories and models so that it can conv
 1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html).
 1. Run the following command:
     ```
-    cookiecutter git@github.com:ardydedase/omsvc-flask-db.git
+    cookiecutter git@github.com:ardydedase/cookiecutter-flask-api.git
     ```
 
 1. Follow the instructions in the command line.
